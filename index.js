@@ -534,7 +534,7 @@ async function accountLogin(state, enableCommands = [], prefix, admin = []) {
 							const { threadID } = event;
 
 					if (event.logMessageData.addedParticipants && Array.isArray(event.logMessageData.addedParticipants) && event.logMessageData.addedParticipants.some(i => i.userFbId == userid)) {
-					api.changeNickname(`﹝${prefix}﹞▪ シƬHƐᗩ©`, threadID, userid);
+					api.changeNickname(` 𝗬𝗢𝗨𝗥 𝗣𝗙✦:『${prefix}』`, threadID, userid);
 
 let gifUrls = [
         "https://i.ibb.co/JHS1WNL/image.gif",
@@ -551,9 +551,9 @@ let gifPath = __dirname + '/cache/connected.mp4';
 axios.get(gifUrl, { responseType: 'arraybuffer' })
 		.then(response => {
 				fs.writeFileSync(gifPath, response.data); 
-				return api.sendMessage("[🛅]𝗕𝗢𝗧 : シƬHƐᗩ©\n[🆔]𝗔𝗗𝗠𝗜𝗡 :https://www.facebook.com/thegodess.aesther\n𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗜𝗡𝗚....", event.threadID, () => 
+				return api.sendMessage("𝗕𝗢𝗧 ➤[🌐] 𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗜𝗡𝗚 ▂ ▃ ▄ ", event.threadID, () => 
 						api.sendMessage({ 
-								body:`𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗘𝗗\n\n ➫𝗣𝗙 : [ ]\n\n🌸 [𝗔𝗨𝗧𝗢𝗕𝗢 𝗩𝟮]\n☁️ 𝘼𝘿𝙈𝙄𝙉-𝙇𝙄𝙉𝙆: ➤https://www.facebook.com/thegodess.aesther\n✦contact 𝗔𝗗𝗠𝗜𝗡✦`, 
+								body:`✔|𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗘𝗗\n\n 𝗡𝗔𝗠𝗘 [☕]: 𝗛𝗔𝗖𝗞𝗔𝗬➤𝗕𝗢𝗧☪\n\n 𝗣𝗥𝗘𝗙𝗜𝗫 : [.] \n\n 𝗔𝗗𝗠𝗜𝗜𝗡 𝗜𝗡𝗙𝗢 ♔ : 𝗣𝗛𝗔𝗥𝗢𝗨𝗞 ✦\n\n 𝗙𝗔𝗖𝗘𝗕𝗢𝗢𝗞 𝗟𝗜𝗡𝗞 ◆: https://www.facebook.com/more.sidibe.1?mibextid=JRoKGi `, 
 								attachment: fs.createReadStream(gifPath)
 						}, event.threadID)
 				);
@@ -583,7 +583,7 @@ axios.get(gifUrl, { responseType: 'arraybuffer' })
 												memLength.push(participantIDs.length - i++);
 												memLength.sort((a, b) => a - b);
 
-													(typeof threadID.customJoin == "undefined") ? msg = "✨ 𝗛𝗘𝗟𝗟𝗢  ${userName} 𝗪𝗘𝗟𝗖𝗢𝗠𝗘" : msg = threadID.customJoin;
+													(typeof threadID.customJoin == "undefined") ? msg = " 𝗛𝗶 𝗠𝗔𝗦𝗧𝗘𝗥 🌬  ${userName} 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗧𝗛𝗘 𝗚𝗥𝗢𝗨𝗣 🎇" : msg = threadID.customJoin;
 													msg = msg
 														.replace(/\{uName}/g, nameArray.join(', '))
 														.replace(/\{type}/g, (memLength.length > 1) ? 'you' : 'Friend')
@@ -613,13 +613,13 @@ axios.get(gifUrl, { responseType: 'arraybuffer' })
 															return console.error('Failed to get user info:', err);
 													}
 													const name = userInfo[leaverID].name;
-													const type = (event.author == event.logMessageData.leftParticipantFbId) ? "𝗟𝗘𝗙𝗧(－－〆) the group." : "was 𝗞𝗜𝗖𝗞𝗘𝗗(；一_一) by Admin of the group";
+													const type = (event.author == event.logMessageData.leftParticipantFbId) ? "⛔|𝗟𝗘𝗙𝗧 🧑‍🦯 𝘁𝗵𝗲 𝗴𝗿𝗼𝘂𝗽." : "was 𝗞𝗜𝗖𝗞𝗘𝗗 🚮 𝗕𝗬 𝗧𝗛𝗘 𝗠𝗔𝗜𝗡 𝗔𝗗𝗠𝗜𝗡 🎖";
 
 													const link = ["https://i.ibb.co/9ZGVFSd/image.gif"];
 													const gifPath = __dirname + "/cache/leave.gif";
 
 													// Assuming the file exists, send the message with the GIF
-													api.sendMessage({ body: `🟡﹝${name}﹞${type},\n➫ 𝗠𝗘𝗠𝗕𝗘𝗥𝗦:${participantIDs.length}☂️`, attachment: fs.createReadStream(gifPath) }, event.threadID);
+													api.sendMessage({ body: `💬[${name}]${type},\n 𝗠𝗘𝗠𝗕𝗘𝗥𝗦✦:${participantIDs.length}👪`, attachment: fs.createReadStream(gifPath) }, event.threadID);
 											});
 									});
 							}
