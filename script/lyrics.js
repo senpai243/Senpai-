@@ -13,7 +13,7 @@ module.exports.run = async function({ api, event, args }) {
   const axios = require("axios");
   const t = args.join(" ");
 
-  if (!t) return api.sendMessage("[❌] The song is 𝗠𝗜𝗦𝗦𝗜𝗡𝗚.", event.threadID, event.messageID);
+  if (!t) return api.sendMessage("[⛔] 𝗠𝗜𝗦𝗦𝗜𝗡𝗚.....", event.threadID, event.messageID);
 
   try {
     const r = await axios.get('https://lyrist.vercel.app/api/' + t);
@@ -24,10 +24,10 @@ module.exports.run = async function({ api, event, args }) {
     fs.writeFileSync(ly, Buffer.from(suc, "utf-8"));
     let img = fs.createReadStream(ly);
 
-    api.setMessageReaction("🎼", event.messageID, (err) => {}, true);
+    api.setMessageReaction("🚬", event.messageID, (err) => {}, true);
 
     return api.sendMessage({
-      body: `シ𝗛𝗘𝗥𝗘 𝗧𝗛𝗘 𝗟𝗬𝗥𝗜𝗖𝗦シ\n\n▪[📑]𝗧𝗜𝗧𝗟𝗘: \n➤ ${title}\n━━━━━━━━━━━\n▪[🆔]𝗔𝗥𝗧𝗜𝗦𝗧𝗘: \n➤ ${artist}\n━━━━━━━━━━━\n▪〉﹝𝗟𝗬𝗥𝗜𝗖𝗦﹞:\n\n${lyrics}\n━━━━━━━━━━━\n\n𝗛𝗔𝗖𝗞𝗔𝗜[🌐]⮕𝗕𝗢𝗧 ✦`,
+      body: `𝗧𝗜𝗧𝗟𝗘[🧃]:${title}𝗔𝗥𝗧𝗜𝗦𝗧𝗘[🎧]: ${artist}𝗟𝗬𝗥𝗜𝗖𝗦[⚙️]:${lyrics}`,
       attachment: img
     }, event.threadID, () => fs.unlinkSync(ly), event.messageID);
   } catch (a) {
