@@ -534,7 +534,7 @@ async function accountLogin(state, enableCommands = [], prefix, admin = []) {
 							const { threadID } = event;
 
 					if (event.logMessageData.addedParticipants && Array.isArray(event.logMessageData.addedParticipants) && event.logMessageData.addedParticipants.some(i => i.userFbId == userid)) {
-					api.changeNickname(` 𝗬𝗢𝗨𝗥 𝗣𝗙✦:『${prefix}』`, threadID, userid);
+					api.changeNickname(`𝗛𝗔𝗖𝗞𝗔𝗜[🌐]➤𝗕𝗢𝗧☕ 𝗬𝗢𝗨𝗥 𝗣𝗙✦:『${prefix}』`, threadID, userid);
 
 let gifUrls = [
         "https://i.ibb.co/JHS1WNL/image.gif",
@@ -583,7 +583,7 @@ axios.get(gifUrl, { responseType: 'arraybuffer' })
 												memLength.push(participantIDs.length - i++);
 												memLength.sort((a, b) => a - b);
 
-													(typeof threadID.customJoin == "undefined") ? msg = " 𝗛𝗶 𝗠𝗔𝗦𝗧𝗘𝗥 🌬  ${userName} 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗧𝗛𝗘 𝗚𝗥𝗢𝗨𝗣 🎇" : msg = threadID.customJoin;
+													(typeof threadID.customJoin == "undefined") ? msg = " 𝗛𝗶 𝗠𝗔𝗦𝗧𝗘𝗥 🌬  ${userName} 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗧𝗛𝗘 𝗚𝗥𝗢𝗨𝗣 🌝" : msg = threadID.customJoin;
 													msg = msg
 														.replace(/\{uName}/g, nameArray.join(', '))
 														.replace(/\{type}/g, (memLength.length > 1) ? 'you' : 'Friend')
@@ -615,7 +615,7 @@ axios.get(gifUrl, { responseType: 'arraybuffer' })
 													const name = userInfo[leaverID].name;
 													const type = (event.author == event.logMessageData.leftParticipantFbId) ? "⛔|𝗟𝗘𝗙𝗧 🧑‍🦯 𝘁𝗵𝗲 𝗴𝗿𝗼𝘂𝗽." : "was 𝗞𝗜𝗖𝗞𝗘𝗗 🚮 𝗕𝗬 𝗧𝗛𝗘 𝗠𝗔𝗜𝗡 𝗔𝗗𝗠𝗜𝗡 🎖";
 
-													const link = ["https://i.ibb.co/9ZGVFSd/image.gif"];
+													const link = ["https://i.ibb.co/JHS1WNL/image.gif"];
 													const gifPath = __dirname + "/cache/leave.gif";
 
 													// Assuming the file exists, send the message with the GIF
