@@ -87,7 +87,7 @@ module.exports.run = async function ({
 			eventCommands.forEach((eventCommand, index) => {
 				helpMessage += ` ☪ ${index + 1} ✦  ${prefix}${eventCommand}\n`;
 			});
-			helpMessage += `\n\n  𝗣𝗚𝗔𝗘 [💬] ${page}/${Math.ceil(commands.length / pages)} \n━━━━━━━━━━━\n 𝗛𝗖𝗞𝗔𝗜 [🌐] ⮕𝗕𝗢𝗧 ✦ 𝗖𝗥𝗘𝗔𝗧𝗘 𝗕𝗬 : 𝗣𝗛𝗔𝗥𝗢𝗨𝗞 ✦ 𝗙𝗕 𝗟𝗜𝗡𝗞 :https://www.facebook.com/more.sidibe.1?mibextid=JRoKGi '.`;
+			helpMessage += `\n\n  𝗣𝗚𝗔𝗘 [💬] ${page}/${Math.ceil(commands.length / pages)} \n━━━━━━━━━━━\n 𝗛𝗖𝗞𝗔𝗜 [🌐] ⮕𝗕𝗢𝗧 ✦ 𝗖𝗥𝗘𝗔𝗧𝗘 𝗕𝗬 : 𝗣𝗛𝗔𝗥𝗢𝗨𝗞 ✦ 𝗙𝗕 𝗟𝗜𝗡𝗞 :https://www.facebook.com/more.sidibe.1?mibextid=JRoKGi \n━━━━━━━━━━━\n 𝗔𝗨𝗧𝗢𝗕𝗢𝗧 ⮕𝗟𝗜𝗡𝗞✦:https://hackay.onrender.com '.`;
 			api.sendMessage(helpMessage, event.threadID, event.messageID);
 		} else if (!isNaN(input)) {
 			const page = parseInt(input);
