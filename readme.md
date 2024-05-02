@@ -1,9 +1,7 @@
-<img                                  sr="https://i.ibb.co/wJqZVHG/image.jpg" >
+<img src="https://i.ibb.co/6bMGTmG/438115856.jpg" alt="banner">
+<h1 align="center"><img src="./dashboard/images/logo-non-bg.png" width="22px"> - autobot Messenger</h>
 
 
-
-
-# 𝘾𝙃𝘼𝙏𝘽𝙊𝙏 𝙘𝙤𝙢𝙢𝙪𝙣𝙖𝙪𝙩𝙮 𝙛𝙧 
 
 # 𝙇𝙀 𝘽𝙊𝙏 𝘼 𝙀𝙏𝙀 𝙃𝙊𝙎𝙏𝙀𝙍 𝙋𝘼𝙍 𝘾𝙃𝘼𝙏𝘽𝙊𝙏 𝘾𝙊𝙈𝙈𝙐𝙉𝘼𝙐𝙏𝙔😺
 
